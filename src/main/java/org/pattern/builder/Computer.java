@@ -25,22 +25,18 @@ public class Computer {
         return isBluetoothEnabled;
     }
 
-    private Computer(ComputerBuilder builder){
-        this.hdd= builder.hdd;
-        this.ram= builder.ram;
+    private Computer(ComputerBuilder builder) {
+        this.hdd = builder.hdd;
+        this.ram = builder.ram;
     }
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "hdd='" + hdd + '\'' +
-                ", ram='" + ram + '\'' +
-                ", isGraphicsCardEnabled=" + isGraphicsCardEnabled +
-                ", isBluetoothEnabled=" + isBluetoothEnabled +
-                '}';
+        return "Computer{hdd='" + hdd + "\', ram='" + ram + "\', isGraphicsCardEnabled=" +
+                isGraphicsCardEnabled + ", isBluetoothEnabled=" + isBluetoothEnabled + '}';
     }
 
-    public static class ComputerBuilder{
+    public static class ComputerBuilder {
         private String hdd;
         private String ram;
         private boolean isGraphicsCardEnabled;
@@ -51,7 +47,7 @@ public class Computer {
             this.ram = ram;
         }
 
-        public Computer build(){
+        public Computer build() {
             return new Computer(this);
         }
 
